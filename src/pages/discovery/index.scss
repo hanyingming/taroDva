@@ -1,0 +1,5 @@
+@import "../../styles/mixin";
+
+.discovery-page {
+  @include wh(100%, 100%);
+}
