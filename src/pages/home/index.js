@@ -1,5 +1,5 @@
 import Taro, { Component } from '@tarojs/taro';
-import { View } from '@tarojs/components';
+import { ScrollView } from '@tarojs/components';
 import { connect } from '@tarojs/redux';
 import './index.scss';
 
@@ -18,13 +18,553 @@ export default class Home extends Component {
     })
   };
 
+  onScrolltoupper = (e) => {
+    console.warn(e);
+  }
+  onScroll = (e) => {
+    console.warn(e, 'scroll');
+  }
+
   render() {
     const { home } = this.props;
     console.warn(home.workCountryList, '/..')
     return (
-      <View className="home-page">
+      <ScrollView
+        className="home-page"
+        scrollY
+        scrollWithAnimation
+        scrollTop='0'
+        lowerThreshold='50'
+        upperThreshold='50'
+        onScrolltoupper={this.onScrolltoupper}
+        onScroll={this.onScroll}
+      >
         你好，hello
-      </View>
+        你好，hello 你好，hello
+        你好，hello
+        你好，hello
+        你好，hello
+        你好，hello
+        你好，hello
+        你好，hello
+        你好，hello
+        你好，hello 你好，hello 你好，hello
+        你好，hello
+        你好，hello 你好，hello
+        你好，hello
+        你好，hello
+        你好，hello
+        你好，hello
+        你好，hello
+        你好，hello
+        你好，hello
+        你好，hello 你好，hello 你好，hello 你好，hello
+        你好，hello 你好，hello
+        你好，hello
+        你好，hello
+        你好，hello
+        你好，hello
+        你好，hello
+        你好，hello
+        你好，hello
+        你好，hello 你好，hello 你好，hello 你好，hello
+        你好，hello 你好，hello
+        你好，hello
+        你好，hello
+        你好，hello
+        你好，hello
+        你好，hello
+        你好，hello
+        你好，hello
+        你好，hello 你好，hello 你好，hello 你好，hello
+        你好，hello 你好，hello
+        你好，hello
+        你好，hello
+        你好，hello
+        你好，hello
+        你好，hello
+        你好，hello
+        你好，hello
+        你好，hello 你好，hello 你好，hello 你好，hello
+        你好，hello 你好，hello
+        你好，hello
+        你好，hello
+        你好，hello
+        你好，hello
+        你好，hello
+        你好，hello
+        你好，hello
+        你好，hello 你好，hello 你好，hello 你好，hello
+        你好，hello 你好，hello
+        你好，hello
+        你好，hello
+        你好，hello
+        你好，hello
+        你好，hello
+        你好，hello
+        你好，hello
+        你好，hello 你好，hello 你好，hello 你好，hello
+        你好，hello 你好，hello
+        你好，hello
+        你好，hello
+        你好，hello
+        你好，hello
+        你好，hello
+        你好，hello
+        你好，hello
+        你好，hello 你好，hello 你好，hello 你好，hello
+        你好，hello 你好，hello
+        你好，hello
+        你好，hello
+        你好，hello
+        你好，hello
+        你好，hello
+        你好，hello
+        你好，hello
+        你好，hello 你好，hello 你好，hello 你好，hello
+        你好，hello 你好，hello
+        你好，hello
+        你好，hello
+        你好，hello
+        你好，hello
+        你好，hello
+        你好，hello
+        你好，hello
+        你好，hello 你好，hello 你好，hello 你好，hello
+        你好，hello 你好，hello
+        你好，hello
+        你好，hello
+        你好，hello
+        你好，hello
+        你好，hello
+        你好，hello
+        你好，hello
+        你好，hello 你好，hello 你好，hello 你好，hello
+        你好，hello 你好，hello
+        你好，hello
+        你好，hello
+        你好，hello
+        你好，hello
+        你好，hello
+        你好，hello
+        你好，hello
+        你好，hello 你好，hello 你好，hello 你好，hello
+        你好，hello 你好，hello
+        你好，hello
+        你好，hello
+        你好，hello
+        你好，hello
+        你好，hello
+        你好，hello
+        你好，hello
+        你好，hello 你好，hello 你好，hello 你好，hello
+        你好，hello 你好，hello
+        你好，hello
+        你好，hello
+        你好，hello
+        你好，hello
+        你好，hello
+        你好，hello
+        你好，hello
+        你好，hello 你好，hello 你好，hello 你好，hello
+        你好，hello 你好，hello
+        你好，hello
+        你好，hello
+        你好，hello
+        你好，hello
+        你好，hello
+        你好，hello
+        你好，hello
+        你好，hello 你好，hello 你好，hello 你好，hello
+        你好，hello 你好，hello
+        你好，hello
+        你好，hello
+        你好，hello
+        你好，hello
+        你好，hello
+        你好，hello
+        你好，hello
+        你好，hello 你好，hello 你好，hello 你好，hello
+        你好，hello 你好，hello
+        你好，hello
+        你好，hello
+        你好，hello
+        你好，hello
+        你好，hello
+        你好，hello
+        你好，hello
+        你好，hello 你好，hello 你好，hello 你好，hello
+        你好，hello 你好，hello
+        你好，hello
+        你好，hello
+        你好，hello
+        你好，hello
+        你好，hello
+        你好，hello
+        你好，hello
+        你好，hello 你好，hello 你好，hello 你好，hello
+        你好，hello 你好，hello
+        你好，hello
+        你好，hello
+        你好，hello
+        你好，hello
+        你好，hello
+        你好，hello
+        你好，hello
+        你好，hello 你好，hello 你好，hello 你好，hello
+        你好，hello 你好，hello
+        你好，hello
+        你好，hello
+        你好，hello
+        你好，hello
+        你好，hello
+        你好，hello
+        你好，hello
+        你好，hello 你好，hello 你好，hello 你好，hello
+        你好，hello 你好，hello
+        你好，hello
+        你好，hello
+        你好，hello
+        你好，hello
+        你好，hello
+        你好，hello
+        你好，hello
+        你好，hello 你好，hello 你好，hello 你好，hello
+        你好，hello 你好，hello
+        你好，hello
+        你好，hello
+        你好，hello
+        你好，hello
+        你好，hello
+        你好，hello
+        你好，hello
+        你好，hello 你好，hello 你好，hello 你好，hello
+        你好，hello 你好，hello
+        你好，hello
+        你好，hello
+        你好，hello
+        你好，hello
+        你好，hello
+        你好，hello
+        你好，hello
+        你好，hello 你好，hello 你好，hello 你好，hello
+        你好，hello 你好，hello
+        你好，hello
+        你好，hello
+        你好，hello
+        你好，hello
+        你好，hello
+        你好，hello
+        你好，hello
+        你好，hello 你好，hello 你好，hello 你好，hello
+        你好，hello 你好，hello
+        你好，hello
+        你好，hello
+        你好，hello
+        你好，hello
+        你好，hello
+        你好，hello
+        你好，hello
+        你好，hello 你好，hello 你好，hello 你好，hello
+        你好，hello 你好，hello
+        你好，hello
+        你好，hello
+        你好，hello
+        你好，hello
+        你好，hello
+        你好，hello
+        你好，hello
+        你好，hello 你好，hello 你好，hello 你好，hello
+        你好，hello 你好，hello
+        你好，hello
+        你好，hello
+        你好，hello
+        你好，hello
+        你好，hello
+        你好，hello
+        你好，hello
+        你好，hello 你好，hello 你好，hello 你好，hello
+        你好，hello 你好，hello
+        你好，hello
+        你好，hello
+        你好，hello
+        你好，hello
+        你好，hello
+        你好，hello
+        你好，hello
+        你好，hello 你好，hello 你好，hello 你好，hello
+        你好，hello 你好，hello
+        你好，hello
+        你好，hello
+        你好，hello
+        你好，hello
+        你好，hello
+        你好，hello
+        你好，hello
+        你好，hello 你好，hello 你好，hello 你好，hello
+        你好，hello 你好，hello
+        你好，hello
+        你好，hello
+        你好，hello
+        你好，hello
+        你好，hello
+        你好，hello
+        你好，hello
+        你好，hello 你好，hello 你好，hello 你好，hello
+        你好，hello 你好，hello
+        你好，hello
+        你好，hello
+        你好，hello
+        你好，hello
+        你好，hello
+        你好，hello
+        你好，hello
+        你好，hello 你好，hello 你好，hello 你好，hello
+        你好，hello 你好，hello
+        你好，hello
+        你好，hello
+        你好，hello
+        你好，hello
+        你好，hello
+        你好，hello
+        你好，hello
+        你好，hello 你好，hello 你好，hello 你好，hello
+        你好，hello 你好，hello
+        你好，hello
+        你好，hello
+        你好，hello
+        你好，hello
+        你好，hello
+        你好，hello
+        你好，hello
+        你好，hello 你好，hello 你好，hello 你好，hello
+        你好，hello 你好，hello
+        你好，hello
+        你好，hello
+        你好，hello
+        你好，hello
+        你好，hello
+        你好，hello
+        你好，hello
+        你好，hello 你好，hello 你好，hello 你好，hello
+        你好，hello 你好，hello
+        你好，hello
+        你好，hello
+        你好，hello
+        你好，hello
+        你好，hello
+        你好，hello
+        你好，hello
+        你好，hello 你好，hello 你好，hello 你好，hello
+        你好，hello 你好，hello
+        你好，hello
+        你好，hello
+        你好，hello
+        你好，hello
+        你好，hello
+        你好，hello
+        你好，hello
+        你好，hello 你好，hello 你好，hello 你好，hello
+        你好，hello 你好，hello
+        你好，hello
+        你好，hello
+        你好，hello
+        你好，hello
+        你好，hello
+        你好，hello
+        你好，hello
+        你好，hello 你好，hello 你好，hello 你好，hello
+        你好，hello 你好，hello
+        你好，hello
+        你好，hello
+        你好，hello
+        你好，hello
+        你好，hello
+        你好，hello
+        你好，hello
+        你好，hello 你好，hello 你好，hello 你好，hello
+        你好，hello 你好，hello
+        你好，hello
+        你好，hello
+        你好，hello
+        你好，hello
+        你好，hello
+        你好，hello
+        你好，hello
+        你好，hello 你好，hello 你好，hello 你好，hello
+        你好，hello 你好，hello
+        你好，hello
+        你好，hello
+        你好，hello
+        你好，hello
+        你好，hello
+        你好，hello
+        你好，hello
+        你好，hello 你好，hello 你好，hello 你好，hello
+        你好，hello 你好，hello
+        你好，hello
+        你好，hello
+        你好，hello
+        你好，hello
+        你好，hello
+        你好，hello
+        你好，hello
+        你好，hello 你好，hello 你好，hello 你好，hello
+        你好，hello 你好，hello
+        你好，hello
+        你好，hello
+        你好，hello
+        你好，hello
+        你好，hello
+        你好，hello
+        你好，hello
+        你好，hello 你好，hello 你好，hello 你好，hello
+        你好，hello 你好，hello
+        你好，hello
+        你好，hello
+        你好，hello
+        你好，hello
+        你好，hello
+        你好，hello
+        你好，hello
+        你好，hello 你好，hello 你好，hello 你好，hello
+        你好，hello 你好，hello
+        你好，hello
+        你好，hello
+        你好，hello
+        你好，hello
+        你好，hello
+        你好，hello
+        你好，hello
+        你好，hello 你好，hello 你好，hello 你好，hello
+        你好，hello 你好，hello
+        你好，hello
+        你好，hello
+        你好，hello
+        你好，hello
+        你好，hello
+        你好，hello
+        你好，hello
+        你好，hello 你好，hello 你好，hello 你好，hello
+        你好，hello 你好，hello
+        你好，hello
+        你好，hello
+        你好，hello
+        你好，hello
+        你好，hello
+        你好，hello
+        你好，hello
+        你好，hello 你好，hello 你好，hello 你好，hello
+        你好，hello 你好，hello
+        你好，hello
+        你好，hello
+        你好，hello
+        你好，hello
+        你好，hello
+        你好，hello
+        你好，hello
+        你好，hello 你好，hello 你好，hello 你好，hello
+        你好，hello 你好，hello
+        你好，hello
+        你好，hello
+        你好，hello
+        你好，hello
+        你好，hello
+        你好，hello
+        你好，hello
+        你好，hello 你好，hello 你好，hello 你好，hello
+        你好，hello 你好，hello
+        你好，hello
+        你好，hello
+        你好，hello
+        你好，hello
+        你好，hello
+        你好，hello
+        你好，hello
+        你好，hello 你好，hello 你好，hello 你好，hello
+        你好，hello 你好，hello
+        你好，hello
+        你好，hello
+        你好，hello
+        你好，hello
+        你好，hello
+        你好，hello
+        你好，hello
+        你好，hello 你好，hello 你好，hello 你好，hello
+        你好，hello 你好，hello
+        你好，hello
+        你好，hello
+        你好，hello
+        你好，hello
+        你好，hello
+        你好，hello
+        你好，hello
+        你好，hello 你好，hello 你好，hello 你好，hello
+        你好，hello 你好，hello
+        你好，hello
+        你好，hello
+        你好，hello
+        你好，hello
+        你好，hello
+        你好，hello
+        你好，hello
+        你好，hello 你好，hello 你好，hello 你好，hello
+        你好，hello 你好，hello
+        你好，hello
+        你好，hello
+        你好，hello
+        你好，hello
+        你好，hello
+        你好，hello
+        你好，hello
+        你好，hello 你好，hello 你好，hello 你好，hello
+        你好，hello 你好，hello
+        你好，hello
+        你好，hello
+        你好，hello
+        你好，hello
+        你好，hello
+        你好，hello
+        你好，hello
+        你好，hello 你好，hello 你好，hello 你好，hello
+        你好，hello 你好，hello
+        你好，hello
+        你好，hello
+        你好，hello
+        你好，hello
+        你好，hello
+        你好，hello
+        你好，hello
+        你好，hello 你好，hello 你好，hello 你好，hello
+        你好，hello 你好，hello
+        你好，hello
+        你好，hello
+        你好，hello
+        你好，hello
+        你好，hello
+        你好，hello
+        你好，hello
+        你好，hello 你好，hello 你好，hello 你好，hello
+        你好，hello 你好，hello
+        你好，hello
+        你好，hello
+        你好，hello
+        你好，hello
+        你好，hello
+        你好，hello
+        你好，hello
+        你好，hello 你好，hello 你好，hello 你好，hello
+        你好，hello 你好，hello
+        你好，hello
+        你好，hello
+        你好，hello
+        你好，hello
+        你好，hello
+        你好，hello
+        你好，hello
+        你好，hello 你好，hello 你好，hello
+
+      </ScrollView>
     )
   }
 }
