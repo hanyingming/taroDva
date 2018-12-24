@@ -32,7 +32,7 @@ class Index extends Component {
     })
   }
 
-  render() {
+  render () {
     const { currentTab } = this.state
 
     return (
