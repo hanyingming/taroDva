@@ -1,0 +1,20 @@
+@import "../../styles/mixin";
+
+.indexPage {
+  @include wh(100%, 100%);
+  .mainWrapper {
+    @include wh(100%, 100%);
+    box-sizing: border-box;
+    padding-bottom: 120rpx;
+    .viewWrapper {
+      @include wh(100%, 100%);
+    }
+  }
+}
+
+
+
+
+
+
+

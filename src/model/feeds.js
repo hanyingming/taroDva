@@ -15,7 +15,7 @@ export default {
     },
   },
   effects: {
-    * search(_, {all, call, put}) {
+    * search(_, { call, put}) {
       Taro.showLoading({
         title: '搜索中...',
       });
@@ -28,7 +28,7 @@ export default {
         Taro.hideLoading();
       }
     },
-    * load({payload}, {all, call, put}) {
+    * load({ }, { call, put }) {
       let {data} = yield call(request, {
         url: 'https://easy-mock.com/mock/5b21d97f6b88957fa8a502f2/example/feed'
       });
@@ -40,7 +40,7 @@ export default {
         }
       })
     },
-    * loadMore({payload}, {all, call, put}) {
+    * loadMore({}, { call, put }) {
       let {data} = yield call(request, {
         url: 'https://easy-mock.com/mock/5b21d97f6b88957fa8a502f2/example/feed'
       });

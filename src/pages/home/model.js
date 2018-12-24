@@ -1,12 +1,13 @@
 
 import Taro from '@tarojs/taro'
 
-import request from "../../utils/request";
-import delay from "../../utils/delay";
-import * as homeApi from './service';
-const COMMON_LOADING = 'commonLoading';
-const COMMON_LOAD_SUCCESS = 'commonLoadSuccess';
-const COMMON_LOAD_FAIL = 'commonLoadFail';
+// import request from "../../utils/request";
+// import delay from "../../utils/delay";
+import * as homeApi from './service'
+
+const COMMON_LOADING = 'commonLoading'
+const COMMON_LOAD_SUCCESS = 'commonLoadSuccess'
+const COMMON_LOAD_FAIL = 'commonLoadFail'
 
 export default {
   namespace: 'home',
@@ -20,12 +21,12 @@ export default {
 
   effects: {
     // 获取工作国家列表
-    * getWorkCountryList({ payload }, { call, put }) {
+    * getWorkCountryList ({ payload }, { call, put }) {
       yield put({
         type: COMMON_LOADING,
         stateKey: 'workCountryList'
-      });
-      const data = yield call(homeApi.getWorkCountryList, payload);
+      })
+      const data = yield call(homeApi.getWorkCountryList, payload)
       if (data && data.code === 200) {
         yield put({
           type: COMMON_LOAD_SUCCESS,
@@ -35,13 +36,13 @@ export default {
             dataMessage: data.message,
             dataCode: data.code
           }
-        });
+        })
       } else {
         yield put({
           type: COMMON_LOAD_FAIL,
           stateKey: 'workCountryList',
           error: data
-        });
+        })
         // message.error(data && data.message || '请求失败');
       }
     },
@@ -54,7 +55,7 @@ export default {
      * @param action
      * @returns {{}}
      */
-    [COMMON_LOADING](state, action) {
+    [COMMON_LOADING] (state, action) {
       return {
         ...state,
         [action.stateKey]: {
@@ -62,7 +63,7 @@ export default {
           loading: true,
           loaded: false
         }
-      };
+      }
     },
 
     /**
@@ -71,7 +72,7 @@ export default {
      * @param action
      * @returns {{}}
      */
-    [COMMON_LOAD_SUCCESS](state, action) {
+    [COMMON_LOAD_SUCCESS] (state, action) {
       return {
         ...state,
         [action.stateKey]: {
@@ -80,7 +81,7 @@ export default {
           loaded: true,
           data: action.result
         }
-      };
+      }
     },
 
     /**
@@ -89,7 +90,7 @@ export default {
      * @param action
      * @returns {{}}
      */
-    [COMMON_LOAD_FAIL](state, action) {
+    [COMMON_LOAD_FAIL] (state, action) {
       return {
         ...state,
         [action.stateKey]: {
@@ -98,7 +99,7 @@ export default {
           loaded: false,
           error: action.error
         }
-      };
+      }
     },
 
     /**
@@ -106,7 +107,7 @@ export default {
      * @param state
      * @param action
      */
-    setPagination(state, action) {
+    setPagination (state, action) {
       return {
         ...state,
         [action.stateKey]: {
@@ -116,7 +117,7 @@ export default {
             ...action.payload
           }
         }
-      };
+      }
     },
 
     /**
@@ -125,7 +126,7 @@ export default {
      * @param action
      * @returns {{}}
      */
-    resetData(state, action) {
+    resetData (state, action) {
       return {
         ...state,
         [action.stateKey]: {
@@ -135,4 +136,4 @@ export default {
     },
   },
 
-};
+}

@@ -1,12 +1,12 @@
-import Taro, { Component } from '@tarojs/taro';
-import { View } from '@tarojs/components';
-import { connect } from '@tarojs/redux';
-import './index.scss';
+import Taro, { Component } from '@tarojs/taro'
+import { View } from '@tarojs/components'
+import { connect } from '@tarojs/redux'
+import styles from './index.module.scss'
 
-@connect(({discovery}) => ({
+@connect(({ discovery }) => ({
   ...discovery,
 }))
-export default class Discovery extends Component {
+class Discovery extends Component {
   config = {
     navigationBarTitleText: 'discovery',
   };
@@ -15,11 +15,12 @@ export default class Discovery extends Component {
 
   };
 
-  render() {
+  render () {
     return (
-      <View className="discovery-page">
+      <View className={styles.discoveryPage}>
         discovery
       </View>
     )
   }
 }
+export default Discovery

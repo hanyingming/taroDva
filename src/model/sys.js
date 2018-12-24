@@ -7,7 +7,7 @@ export default {
     },
   },
   effects: {
-    * error({payload: e}, {all, call, put}) {
+    * error({payload: e}, {}) {
       // debugger;
       console.error("error:", e);
       // if (e instanceof String) {

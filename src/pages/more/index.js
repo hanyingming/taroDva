@@ -1,12 +1,12 @@
-import Taro, { Component } from '@tarojs/taro';
-import { View } from '@tarojs/components';
-import { connect } from '@tarojs/redux';
-import './index.scss';
+import Taro, { Component } from '@tarojs/taro'
+import { View } from '@tarojs/components'
+import { connect } from '@tarojs/redux'
+import styles from './index.module.scss'
 
-@connect(({more}) => ({
-  ...more,
+@connect(state => ({
+  more: state.more
 }))
-export default class More extends Component {
+class More extends Component {
   config = {
     navigationBarTitleText: 'more',
   };
@@ -15,11 +15,12 @@ export default class More extends Component {
 
   };
 
-  render() {
+  render () {
     return (
-      <View className="more-page">
+      <View className={styles.morePage}>
         more
       </View>
     )
   }
 }
+export default More

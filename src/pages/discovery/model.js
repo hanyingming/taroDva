@@ -1,9 +1,9 @@
 
 import Taro from '@tarojs/taro'
 
-import request from "../../utils/request";
-import delay from "../../utils/delay";
-import * as discoveryApi from './service';
+// import request from '../../utils/request'
+// import delay from '../../utils/delay'
+import * as discoveryApi from './service'
 
 export default {
   namespace: 'discovery',
@@ -12,21 +12,21 @@ export default {
   },
 
   effects: {
-    * effectsDemo(_, { call, put }) {
-      const { status, data } = yield call(discoveryApi.demo, {});
+    * effectsDemo (_, { call, put }) {
+      const { status, data } = yield call(discoveryApi.demo, {})
       if (status === 'ok') {
         yield put({ type: 'save',
           payload: {
             topData: data,
-          } });
+          } })
       }
     },
   },
 
   reducers: {
-    save(state, { payload }) {
-      return { ...state, ...payload };
+    save (state, { payload }) {
+      return { ...state, ...payload }
     },
   },
 
-};
+}
